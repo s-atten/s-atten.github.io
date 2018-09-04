@@ -404,7 +404,7 @@ function createAndAddHistoryElement(details) {
 
 
 	var text = document.createElement('span');
-	text.textContent = dateFromWeekNumber(details[3], details[2]) + ': Attended ' + details[1] + ' of ' + details[2] + ' classes' ;
+	text.textContent = dateFromWeekNumber(details[3], details[2]) + ': Attended ' + details[0] + ' of ' + details[1] + ' classes' ;
 	parent.appendChild(text);
 
 
