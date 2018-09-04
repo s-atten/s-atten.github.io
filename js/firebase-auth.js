@@ -2,7 +2,7 @@ var currentUser;
 var userData;
 var db = firebase.firestore();
 var variables = {
-	site: 'http://localhost:8080/',
+	site: 'https://s-atten.github.io/',
 	usernameContainer: 'dw-name',
 	emailContainer: 'dw-email',
 	profilePicConainer: 'dw-pic',
