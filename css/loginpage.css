@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.1);
+	padding: 2em;
+	text-align: center;
+
+}
+#main {
+	margin: 0 auto;
+}
+h2{
+	margin-bottom: -1em;
+	display: block;
+	font-weight: 400;
+	font-family: 'Roboto';
+}
+h1{
+	font-family: 'Montserrat', sans-serif;
+}
+#footer{
+	opacity: 0.2;
+	transition: opacity 0.2s ease-in-out;
+}
+#footer:hover{
+	opacity: 0.8;
+}

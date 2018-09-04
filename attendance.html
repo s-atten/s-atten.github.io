@@ -1,0 +1,137 @@
+<html>
+ <head>
+   <link rel="stylesheet" href="bundle.css">
+   <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
+   <link rel="manifest" href="manifest.json">
+   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+    <script type="text/javascript" src="js/firebase-init.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+     <link href="css/attendance.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+ </head>
+ <body>
+
+      <header id="mdc-bottom-appbar" class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <div class="mdc-top-app-bar__row">
+
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <i class="mdc-icon-button" id="menubutton">
+                    <img src="" id="dw-pic">
+                </i>
+            </section>
+
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <i class="material-icons mdc-top-app-bar__action-item" aria-label="More" id="menu-button" alt="Menu">more_vert</i>
+            </section>
+
+        </div>
+    </header>
+
+    <div class="mdc-menu mdc-menu-surface" tabindex="-1" id="logout-menu">
+         <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <div id="dw-details">
+                <img src="" id="dw-pic-2">
+                <div id="dw-text">
+                    <span id="dw-name"></span>
+                    <span id="dw-email"></span>
+                </div>
+            </div>
+            <li class="mdc-list-item" id="dw-signout" role="menuitem" tabindex="0">
+                Log Out
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdc-menu app-menu" tabindex="-1" id="main-menu" style="z-index: 15;">
+        <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                Erase all history
+            </li>
+            <li class="mdc-list-item" role="menuitem" tabindex="0" onclick="window.alert(currentUser.uid);">
+                User ID
+            </li>
+            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                Help
+            </li>
+        </ul>
+    </div>
+
+    <button id="fab" class="mdc-fab" aria-label="Add">
+        <span class="mdc-fab__icon material-icons">clear</span>
+    </button>
+
+
+    <canvas id="columnchart"></canvas>
+
+    <div id="modal" style="display: none">
+
+        <div id="modal-heading" class="mdc-typography--headline6"><button class="material-icons mdc-icon-button" id="modal-nav-back">arrow_back</button> Add attendance</div>
+        <div id="modal-body">
+
+            <div id="modal-input">
+                <div id="att-class-input">
+                    <span class="mdc-typography--subtitle2 md-head"> Classes attended</span>
+                    <div class="mdc-text-field md-text" id="att-atclasses">
+                      <input type="number" id="att-atc-textfield" class="mdc-text-field__input" placeholder="0">
+                      <div class="mdc-line-ripple"></div>
+                    </div>            
+                </div>
+
+                <div id="att-toclass-input">
+                    <span class="mdc-typography--subtitle2 md-head"> Total classes</span>
+                    <div class="mdc-text-field md-text" id="att-toclasses">
+                      <input type="number" id="att-tc-textfield" class="mdc-text-field__input"  placeholder="0">
+                      <div class="mdc-line-ripple"></div>
+                    </div>           
+                </div>
+            </div>
+
+            <div id="button-cont">
+                <button class="mdc-button mdc-button--raised" id="submit-button">
+                    Add
+                </button>
+                <button class="mdc-button" id="cancel-button">
+                    Cancel
+                </button>
+            </div>
+
+            <div id="error-cont" style="display: none;">
+                Total
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="mdc-card" id="totalattendance">
+            <canvas class="pie-chart" id="pachart"></canvas>
+            <div>
+                <span id="atten-state" class="mdc-typography--button"></span>
+                <span id="atten-percent-text"></span>
+                <span id="atten-dtg"></span>
+            </div>
+        </div>
+
+        <div class="mdc-card" id="this-week">
+            <span class="mdc-typography--button">This week</span>
+            <span id="linechart">
+                <span id="lineChartBack"></span>
+                <span id="lineChartTop"></span>
+            </span>
+            <span id="tw-classes">No classes yet this week</span>
+        </div>
+
+        <div class="mdc-card" id="History">
+            <span class="mdc-typography--button">History</span>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script src="bundle.js"></script>
+    <script type="text/javascript" src="js/attendance.js"></script>
+    <script type="text/javascript" src="js/firebase-auth.js"></script>
+
+</body>
+</html>

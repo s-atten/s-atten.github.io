@@ -1,1 +1,42 @@
-<h1>YAY</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Studentship :: Login</title>
+		<meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
+		<link rel="manifest" href="manifest.json">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+		<script type="text/javascript" src="js/firebase-init.js"></script>
+
+		<!-- Firebase UI-->
+		<script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+		<script type="text/javascript" src="js/firebaseUI-init.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
+
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="css/loginpage.css" />
+
+		<!-- Webfonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="shade"></div>
+		<div id="main">
+			<img id="hero" src="img/appbranding/logo100x100.png" title="Studentship Logo"/>
+			<h2>Studentship</h2>
+			<h1>Attendance</h1>
+			<p>
+				Organize your student life<br/>
+				Sign in with your Google account to start now!
+			</p>
+			<div id="firebaseui-auth-container"></div>
+			<div id="footer">Made with &lt;3 by <a href="https://therdas.github.io/">therdas</a>, Under MIT License</div>
+		</div>
+
+	</body>
+</html>
