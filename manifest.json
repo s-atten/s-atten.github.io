@@ -35,5 +35,5 @@
   "background_color": "#e5e5e5",
   "theme_color": "#2196f3",
   "display": "standalone",
-  "start_url": "app/attendance.html"
+  "start_url": "attendance.html"
 }
